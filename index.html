@@ -4,25 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Weather Dashboard</title>
 </head>
 <body>
     <header class="header">
-        <div class="navbar">
-            <div class="container">
-                <form id="searchBox">
-                    <input type="search" placeholder="Austin, TX">
-                    <button class="btn btn-nav" type="submit">Search</button>
-                </form>
-            </div><h1>Weather Dashboard</h1></div>
-        </div>
+        <h1>Weather Dashboard with OpenWeatherMap</h1>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Austin, TX" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
     </header>
+        
+    <section class="container">
+        <h2 class="text-info">How's the Weather Looking?</h2>
+        <div class="row">
+            <div class="card col-9">
+                <div id="current-weather">Current Weather</div>
+                <div class="card-body">
+                    <h3 id="current-location">City Name</h3>
+                    <p><img class="img-fluid" id="curr-icon" src=""></p>
+                    <p class="card-text" id="current-temp">Temp:</p>
+                    <p class="card-text" id="current-feelslike">Feels like:</p>
+                    <p class="card-text" id="current-humidity">Humidty:</p>
+                    <p class="card-text" id="current-speed">Wind speed:</p>
+                </div>
+            </div>
+        </div>
 
+        <div class="card col-2 border-0 align-items-center">
+            <div class="row text-dark text-center m"><h3 id="past-cities">Previous Cities</h3>
+                <p id="curr-temp">asdfa</p>
+                <p id="curr-wind">asdfa</p>
+                <p id="curr-humid">asdfa</p>
+                <a id="clear-button" class="btn btn-primary">Clear</a>
+            </div>
+        </div>
+
+        <div class="col-9 my-4">
+            <h4 class="card-title">5-Day Forecast:</h4>
+            <div class="row" id="forecast-container"></div>
+        </div>
+    </section>
     
 
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
