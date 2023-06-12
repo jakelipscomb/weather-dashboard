@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Weather Dashboard</title>
 </head>
+
 <body>
-    <header class="header">
+    <header class="row container-fluid bg-info-subtle mb-2 p-3">
         <h1>Weather Dashboard with OpenWeatherMap</h1>
-        <nav class="navbar bg-body-tertiary">
+        <nav class="navbar bg-body-tertiary col-3">
             <div class="container-fluid">
               <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Austin, TX" aria-label="Search">
+                <input class="form-control bg-body-secondary" type="search" placeholder="Austin, TX" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
             </div>
@@ -22,36 +23,38 @@
     </header>
         
     <section class="container">
-        <h2 class="text-info">How's the Weather Looking?</h2>
         <div class="row">
-            <div class="card col-9">
-                <div id="current-weather">Current Weather</div>
-                <div class="card-body">
-                    <h3 id="current-location">City Name</h3>
-                    <p><img class="img-fluid" id="curr-icon" src=""></p>
-                    <p class="card-text" id="current-temp">Temp:</p>
-                    <p class="card-text" id="current-feelslike">Feels like:</p>
-                    <p class="card-text" id="current-humidity">Humidty:</p>
-                    <p class="card-text" id="current-speed">Wind speed:</p>
+            <h2 class="text-info">How's the Weather Looking?</h2>
+            <div class="row">
+                <div class="card col-9">
+                    <div id="current-weather">Current Weather</div>
+                    <div class="card-body">
+                        <h3 id="current-location">City Name</h3>
+                        <p><img class="img-fluid" id="curr-icon" src=""></p>
+                        <p class="card-text" id="current-temp">Temp:</p>
+                        <p class="card-text" id="current-feelslike">Feels like:</p>
+                        <p class="card-text" id="current-humidity">Humidty:</p>
+                        <p class="card-text" id="current-speed">Wind speed:</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card col-2 border-0 align-items-center">
-            <div class="row text-dark text-center m"><h3 id="past-cities">Previous Cities</h3>
-                <p id="curr-temp">asdfa</p>
-                <p id="curr-wind">asdfa</p>
-                <p id="curr-humid">asdfa</p>
-                <a id="clear-button" class="btn btn-primary">Clear</a>
+            <div class="card col-2 border-0">
+                <h4 class="m-2 text-dark">Previous Cities</h4>
+                <div id="prev-city-container" class="card-body m-2">
+                </div>
+                <span class="card-body m-2">
+                    <button id="clear-btn" class="btn btn-success p-1 my-2 w-100" type="submit">Clear History</button>
+                </span>
             </div>
-        </div>
 
-        <div class="col-9 my-4">
-            <h4 class="card-title">5-Day Forecast:</h4>
-            <div class="row" id="forecast-container"></div>
-        </div>
+            <div class="col-9 my-4">
+                <h4 class="card-title">5-Day Forecast:</h4>
+                <div class="row" id="forecast-container"></div>
+            </div>
+
+        </div>    
     </section>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
