@@ -2,20 +2,25 @@
 
 ## **Description**
 
-This project is a demonstration of a weather dashboard made with javascript with the help of a server-side API. The project utilizes dayjs for current date and time, localstorage for storing key value pairs when typing information in the boxes, and jQuery elements to change elements by adding and removing classes.
+The intention of this challenge was to create an app that offered the user weather information on a city when typed into the search bar. The app would include the current weather in the city and a 5-day forecast while saving your entry to the side of the screen.
+
+This project is a demonstration of a weather dashboard made with javascript with the help of a server-side API. The project utilizes Bootstrap for the css elements within the html, JQuery to link API functionality to OpenWeatherAPI along with elements that allowed me to add and remove certain classes, dayjs for current date and time, and localstorage for storing key value pairs when typing a city into the search bar. 
 
 ## **Installation**
 
 https://jakelipscomb.github.io/weather-dashboard/
 
 ![Weather Dashboard](/assets/images/weatherapp1.png)
+![](assets/images/weatherapp2.png)
 
 
 ## **Technologies**
 Project is created with:
 * Visual Studio Code version: 1.78.2
-* JQuery
-* 
+* Bootstrap CSS 5.3.0
+* JQuery 3.7.0
+* Day.js
+* OpenWeatherAPI
 	
 ## **Setup**
 To run this project, clone it locally using bash:
